@@ -1,0 +1,37 @@
+<div class="wrapper">
+  <app-inavbar></app-inavbar>
+  <div class ="white-border"></div>
+  <div class="forms-container">
+    <div class="upload-wrap">
+      <button class="btn btn-dark" (change)="addStorageItem($event)">
+        <input type="file" class="upload-btn" id="inputGroupFile01">
+        Add File
+      </button>
+      <div class="upload-text"> Use the button to add a file to our database.</div>
+      </div>
+      <div class="progress">
+        <div class="progress-bar" role="progressbar"
+        [style.width]="uploadPercent | async | percent">
+        <span class="sr-only">
+        {{ uploadPercent | async | percent }}</span>
+        </div>
+      </div>
+      <div>{{ uploadPercent | async }}</div>
+      <table class="table table-striped">
+          <thead>
+              <tr>
+                  <th>Form-Name</th>
+                  <th>Form-Download</th>
+              </tr>
+          </thead>
+          <tbody>
+              <tr *ngFor="let data of fitem | async">
+                  <td>{{data.form_name}}</td>
+                  <td><a href="{{data.form_path}}">download</a></td>
+              </tr>
+          </tbody>
+      </table>
+  </div>
+  <div class ="white-border"></div>
+  <app-footer></app-footer>
+</div>

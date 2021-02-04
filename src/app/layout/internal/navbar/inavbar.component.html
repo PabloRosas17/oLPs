@@ -1,0 +1,36 @@
+<div class="fixed-header">
+  <!-- lisenter invokes onscroll events -->
+  <nav class="navbar-default navbar-light" id='navable'>
+    <div class="media-wrapper">
+      <div class="media-toggler">
+        <button class="navbar-toggler btn-circle"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </div>
+      <div class="media-links">
+        <div class="media-links-wrap">
+        <button class="navbar-toggler btn-circle"></button>
+        <button class="navbar-toggler btn-circle"></button>
+        <button class="navbar-toggler btn-circle"></button>
+        </div>
+      </div>
+    </div>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mx-auto">
+        <li class="nav-item dropdown">
+          <a class="nav-link" routerLink="/mdashboard">mDashboard</a>
+          <a class="nav-link" routerLink="/mstatistics">mStatistics</a>
+          <a class="nav-link" routerLink="/mtesting">mTesting</a>
+          <a class="nav-link" (click)="onSubmit()">Exit</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <div><router-outlet></router-outlet></div>
+</div>

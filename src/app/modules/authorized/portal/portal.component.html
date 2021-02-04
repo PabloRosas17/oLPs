@@ -1,0 +1,21 @@
+<div class="wrapper">
+  <app-navbar></app-navbar>
+  <div class ="white-border"></div>
+  <div class="portal">
+      <div class="form-wrapper fade-down">
+      <div id="form-content">
+          <div class="fade-in first"></div>
+          <form>
+              <input #myUser type="text" class="fade-in second" name="login" placeholder="username">
+              <input #myPass type="text" class="fade-in third" name="login" placeholder="password">
+              <input type="button" class="fade-in fourth" value="Enter"
+              (click)="login(myUser.value,myPass.value)">
+          </form>
+          <div id="form-footer">
+          </div>
+      </div>
+      </div>
+  </div>
+  <div class ="white-border"></div>
+  <app-footer></app-footer>
+</div>

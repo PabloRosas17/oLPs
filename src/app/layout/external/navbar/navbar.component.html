@@ -1,0 +1,45 @@
+<div class="fixed-header">
+  <!-- lisenter invokes onscroll events -->
+  <nav class="navbar-default navbar-light" id='navable'>
+    <div class="media-wrapper">
+      <div class="nav-links">
+        <div class="nav-links-wrap">
+          <button mat-raised-button
+            class="nav-links-pdf-btn"
+            color="primary"
+            matTooltip="save my resume"
+            matTooltipClass="navbar-tooltip"
+            matTooltipPosition="below"
+            (click)="onPdfClick()">Resume
+          </button>
+        </div>
+      </div>
+      <div class="media-links">
+        <div class="media-links-wrap">
+        <button 
+            class="navbar-toggler btn-circle"
+            matTooltip="Medium"
+            matTooltipClass="medium-tooltip">
+          <a href="https://medium.com/@pablo.rosas.0170">
+          <img src="../../../../assets/icons/icon-medium.png"></a>
+        </button>
+        <button 
+            class="navbar-toggler btn-circle"
+            matTooltip="Github"
+            matTooltipClass="github-tooltip">
+          <a href="https://github.com/PabloRosas17">
+          <img src="../../../../assets/icons/icon-github.png"></a>
+        </button>
+        <button 
+            class="navbar-toggler btn-circle"
+            matTooltip="Linkedin"
+            matTooltipClass="linkedin-tooltip">
+          <a href="https://www.linkedin.com/in/pablorosas17/">
+          <img src="../../../../assets/icons/icon-linkedin.png"></a>
+        </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <div><router-outlet></router-outlet></div>
+</div>

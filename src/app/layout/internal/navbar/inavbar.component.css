@@ -1,0 +1,103 @@
+.wrapper .fixed-header{
+	flex: 0 0 auto;
+	background-color: #FFF0F9;
+}
+button.navbar-toggler {
+    background-color: #FFFFFF;
+}
+.btn-circle {
+    width: 30px;
+    height: 30px;
+    padding: 6px 0px;
+    text-align: center;
+    font-size: 12px;
+    line-height: 1.42857;
+}
+.navbar-default {
+    padding: .025rem 1rem;
+    background-color: #282f44;
+    transition : background-color 0.5s ease 0s !important;
+}
+.navbar-opaque {
+    padding: .025rem 1rem;
+    background-color: #E8AEB7;
+    transition: background-color 0.5s ease 0s !important;
+}
+.media-wrapper {
+    display: flex;
+    flex-direction: row;
+}
+.media-toggler {
+    width: 10vw;
+}
+.media-links {
+    display: flex;
+    justify-content: flex-end;
+    width: 90vw;
+}
+.media-links-wrap {
+    display: flex;
+    justify-content: space-evenly;
+    width: 15vw;
+}
+.nav-link {
+    color: #FFFFFF !important;
+}
+.nav-link:hover {
+    background-color: #000000;
+}
+
+/**
+ * Media Queries to handle different screen sizes
+ */
+
+/* extra small devices */
+@media (max-width: 575.98px) and (orientation: landscape) {  
+
+}
+/* extra small devices */
+@media (max-width: 575.98px) and (orientation: portrait) {  
+
+}
+
+/* small devices */
+@media (min-width: 576px) and (max-width: 767.98px) and (orientation: landscape) {  
+
+}
+/* small devices */
+@media (min-width: 576px) and (max-width: 767.98px) and (orientation: portrait) {  
+  .media-links-wrap {
+    width: 30vw;
+  }
+  .navbar-default {
+    padding-top: 3vh;
+    padding-bottom: 3vh;
+  }
+}
+
+/* medium devices */
+@media (min-width: 768px) and (max-width: 991.98px) and (orientation: landscape) {
+
+}
+/* medium devices */
+@media (min-width: 768px) and (max-width: 991.98px) and (orientation: portrait) {
+
+}
+
+/* large devices */
+@media (min-width: 992px) and (max-width: 1199.98px) and (orientation: landscape) { 
+
+}
+/* large devices */
+@media (min-width: 992px) and (max-width: 1199.98px) and (orientation: portrait) { 
+
+}
+
+/* extra large devices */
+@media (min-width: 1200px) and (orientation: landscape) {
+
+}
+/* extra large devices */
+@media (min-width: 1200px) and (orientation: portrait) {
+
+}

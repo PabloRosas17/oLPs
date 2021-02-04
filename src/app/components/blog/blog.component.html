@@ -1,0 +1,25 @@
+  
+<div class="blog-wrapper">
+  <div class="my-blog-pagination">
+    <div class="btn btn-older" (click)="fireOlder()" href="#">Older</div>
+    <div class="btn btn-newer" (click)="fireNewer()" href="#">Newer</div>
+  </div>
+  <div class="my-card-grid">
+    <div *ngFor="let content of article">
+        <div class="card">
+          <div class="card-title" [innerHtml]="content.title|keepHtml"></div>
+          <div class="card-created" [innerHtml]="content.created|keepHtml"></div>
+          <div class="card-body" [innerHtml]="content.body|keepHtml"></div>
+        </div>
+    </div>
+  </div>
+</div>
+
+<!-- * * * * * CREDITS * * * * *
+<div>Icons made by <a href="https://www.flaticon.com/authors/freepik"
+    title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/"
+    title="Flaticon">www.flaticon.com</a></div>
+<div>Icons made by <a href="https://www.flaticon.com/authors/freepik"
+    title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/"
+    title="Flaticon">www.flaticon.com</a></div>
+-->

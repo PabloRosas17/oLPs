@@ -1,0 +1,120 @@
+<div class="wrapper">
+  <app-navbar></app-navbar>
+  <div class ="white-border"></div>
+
+
+  <div class="scrollable-content" id="scrollable">
+    <div class="top-intro">
+      <div class="wrap-top-navbar">
+          <nav class="navigation" id="nav">
+            <a class="navigation_link" href="#main-projects" (click)="onProjectsBtnClick()">Projects</a>
+            <a class="navigation_link" href="#main-blog" (click)="onBlogBtnClick()">Blog</a>
+            <a class="navigation_link" href="#main-contact" (click)="onContactBtnClick()">Contact</a>
+            <a class="navigation_link" href="#main-technologies" (click)="onTechnologiesBtnClick()">Technologies</a>
+          </nav>
+      </div>
+      <div class="wrap-top-intro">
+          Jose Pablo Rosas
+      </div>
+    </div>
+
+    
+    <div class="projects-info" id="main-projects">
+        <div class="box-container">
+            <mat-tab-group mat-align-tabs="center"
+                    animationDuration="1000ms"
+                    (selectedTabChange)="onMatTabChangeEvent($event)"
+                    #tabs>
+            <mat-tab 
+                class="swifttruck-title"
+                label="SwiftTruck">
+            <div class="SwiftTruckBox">
+                <div class="content-left">
+                <mat-list *ngFor="let scene of SwiftTruckScene">
+                    <mat-list-item>
+                    <mat-radio-button (click)="onSwiftTruckSceneBtnClick(scene.scenename)">
+                        {{scene.scenename}}
+                    </mat-radio-button>
+                    </mat-list-item>
+                </mat-list>
+                </div>
+                <div class="content-right">
+                    <app-projects-banner #container [projects]="projects"></app-projects-banner>
+                </div>
+            </div>
+            </mat-tab>
+            </mat-tab-group>
+        </div>
+    </div>
+
+
+    <div class="blog-info" id="main-blog">
+      <app-blog></app-blog>
+    </div>
+
+
+    <div class="contact" id="main-contact">
+      <div class="contact-title">Get in Touch</div>
+        <div class="contact-fields">
+          <div class="row">
+            <input #myName type="email" class="contact-name
+            form-control" placeholder="Name" required [disabled]="firedemail" formnovalidate>
+            <input #myEmail type="email" class="contact-email
+            form-control" placeholder="Email" required [disabled]="firedemail" formnovalidate>
+          </div>
+        </div>
+        <div class="contact-button">
+          <button class="btn-primary contact-submit"
+          [disabled]="firedemail"
+          (click)="fireContactEmail(myName.value,myEmail.value)">Submit</button>
+        </div>
+    </div>
+
+
+    <div class="card-content" id="main-technologies">
+      <mat-grid-list
+        class="my-mat-grid-list"
+        cols="3"
+        rowHeight="3:1"
+        gutterSize="0.5em">
+        <mat-grid-tile
+          class="my-mat-grid-tile"
+          [colspan]="1"
+          [rowspan]="1"
+          *ngFor="let tile of tiles">
+          <mat-card class="my-mat-card">
+          <div class="tilecontianer">
+            <div class="tilelogo">
+              <img class="tileimglogo" [src]="tile.techlogo" height="50px" width="50px">
+            </div>
+            <div class="tilewrapper">
+              <div class="tilename"><a class="tiletechurl" [href]='tile.techurl'>{{tile.techname}}</a></div>
+            </div>
+          </div>
+          </mat-card>
+        </mat-grid-tile>
+      </mat-grid-list>
+    </div>
+  </div>
+
+
+  <div class ="white-border"></div>
+  <app-footer></app-footer>
+</div>
+
+<!-- * * * * * CREDITS * * * * *
+<div>Icons made by <a href="https://www.flaticon.com/authors/bqlqn"
+    title="bqlqn">bqlqn</a> from <a href="https://www.flaticon.com/"
+    title="Flaticon">www.flaticon.com</a>
+</div>
+<div>Icons made by <a href="https://www.flaticon.com/authors/smashicons
+   title="Smashicons">Smashicons</a> from <a href="https://www.flaticon.com/"
+   title="Flaticon">www.flaticon.com</a></div>
+<div>Icons made by <a href="https://www.flaticon.com/authors/freepik"
+  title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/"
+  title="Flaticon">www.flaticon.com</a></div>
+-->
+
+<!-- CREDITS
+<a href="https://www.freepik.com/free-photos-vectors/background">Background vector created by rawpixel.com - www.freepik.com</a>
+-->

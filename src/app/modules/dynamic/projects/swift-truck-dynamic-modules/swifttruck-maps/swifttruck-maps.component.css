@@ -1,0 +1,99 @@
+.swifttruck-maps {
+    display: flex;
+    flex-direction: column;
+}
+.gif-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Mogra', cursive;
+}
+.gif-demo {
+    display: flex;
+    justify-content: center;
+}
+.gif-description{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Itim', cursive;
+}
+
+/**
+ * Media Queries to handle different screen sizes
+ */
+
+/* extra small devices */
+@media (max-width: 575.98px) and (orientation: landscape) {  
+  img {
+    width: 25vw;
+    height: 75vh;
+  }
+}
+/* extra small devices */
+@media (max-width: 575.98px) and (orientation: portrait) {  
+  img {
+    width: 25vw;
+    height: 45vh;
+  }
+}
+
+/* small devices */
+@media (min-width: 576px) and (max-width: 767.98px) and (orientation: landscape) {  
+  img {
+    width: 25vw;
+    height: 75vh;
+  }
+}
+/* small devices */
+@media (min-width: 576px) and (max-width: 767.98px) and (orientation: portrait) {  
+  img {
+    width: 25vw;
+    height: 50vh;
+  }
+}
+
+/* medium devices */
+@media (min-width: 768px) and (max-width: 991.98px) and (orientation: landscape) {
+  img {
+    width: 200px;
+    height: 300px;
+  }
+}
+/* medium devices */
+@media (min-width: 768px) and (max-width: 991.98px) and (orientation: portrait) {
+  img {
+    width: 200px;
+    height: 200px;
+  }
+}
+
+/* large devices */
+@media (min-width: 992px) and (max-width: 1199.98px) and (orientation: landscape) { 
+  img {
+    width: 200px;
+    height: 350px;
+  }
+}
+/* large devices */
+@media (min-width: 992px) and (max-width: 1199.98px) and (orientation: portrait) { 
+  img {
+    width: 200px;
+    height: 250px;
+  }
+}
+
+/* extra large devices */
+@media (min-width: 1200px) and (orientation: landscape) {
+  img {
+    width: 200px;
+    height: 400px;
+  }
+}
+/* extra large devices */
+@media (min-width: 1200px) and (orientation: portrait) {
+  img {
+    width: 200px;
+    height: 300px;
+  }
+}

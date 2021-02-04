@@ -1,0 +1,183 @@
+
+.blog-wrapper{
+    display: flex;
+    flex-direction: row;
+}
+.my-blog-pagination {
+    width: 15vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.my-card-grid{
+    width: 85vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.btn {
+    margin: 1rem!important;
+}
+.btn.btn-older:hover{
+    background-color: #191d32;
+}
+.btn.btn-older{
+    color: #FFFFFF;
+    border-color: #FFFFFF;
+    background-color: #e8aea7;
+    font-family: Leckerli One;
+}
+.btn.btn-newer:hover{
+    background-color: #191d32;
+}
+.btn.btn-newer{
+    color: #FFFFFF;
+    border-color: #FFFFFF;
+    background-color: #e8aea7;
+    font-family: Leckerli One;
+}
+.card {
+    width: 35vw;
+    height: 35vh;
+    margin: 2rem!important;
+    background-color: #191d32;
+    color: #FFFFFF;
+    font-size: 10px;
+}
+.card-title{
+    align-self: center;
+    font-size: 15px;
+}
+.card-created{
+    font-size: 08px;
+    align-self: center;
+}
+.card-body{
+    font-size: 10px;
+    overflow: overlay;
+    overflow: scroll;
+}
+.card-body::-webkit-scrollbar {
+    width: 10px;
+	background-color: #282f44;
+}
+.card-body::-webkit-scrollbar-track {
+	-webkit-box-shadow: inset 0 0 5px #a799b7;
+	border-radius: 10px;
+	background-color: #282f44;
+}
+.card-body::-webkit-scrollbar-thumb {
+    width: 10px;
+    border-radius: 10px;
+	background-color: #a799b7;
+}
+.featured-icon{
+    display: flex;
+    padding: 5px 5px 5px 5px;
+}
+
+/**
+ * Media Queries to handle different screen sizes
+ */
+
+/* extra small devices */
+@media (max-width: 575.98px) and (orientation: landscape) {  
+  .card {
+    width: 30vw;
+    height: 80vh;
+    margin: 0.5rem!important;
+  }
+  .btn , .btn.btn-older {
+    display: flex;
+    width: 10vw;
+    font-size: 10px;
+    justify-content: center;
+  }
+}
+/* extra small devices */
+@media (max-width: 575.98px) and (orientation: portrait) {  
+  .card {
+    width: 30vw;
+    height: 30vh;
+    margin: 0.5rem!important;
+  }
+  .btn , .btn.btn-older {
+    display: flex;
+    width: 10vw;
+    font-size: 10px;
+    justify-content: center;
+  }
+}
+
+/* small devices */
+@media (min-width: 576px) and (max-width: 767.98px) and (orientation: landscape) {  
+  .card {
+    width: 25vw;
+    height: 50vh;
+  }
+}
+/* small devices */
+@media (min-width: 576px) and (max-width: 767.98px) and (orientation: portrait) {  
+  .card {
+    width: 25vw;
+    height: 25vh;
+  }
+}
+
+/* medium devices */
+@media (min-width: 768px) and (max-width: 991.98px) and (orientation: landscape) {
+  .card {
+    height: 50vh;
+  }
+}
+/* medium devices */
+@media (min-width: 768px) and (max-width: 991.98px) and (orientation: portrait) {
+  .card {
+    height: 20vh;
+  }
+}
+
+/* large devices */
+@media (min-width: 992px) and (max-width: 1199.98px) and (orientation: landscape) { 
+  .card {
+    height: 30vh;
+  }
+}
+/* large devices */
+@media (min-width: 992px) and (max-width: 1199.98px) and (orientation: portrait) { 
+  .card {
+    height: 15vh;
+  }
+}
+
+/* extra large devices */
+@media (min-width: 1200px) and (max-width: 1299.98px) and (orientation: landscape) {
+  .card {
+    width: 25vw;
+    height: 35vh;
+  }
+}
+/* extra large devices */
+@media (min-width: 1200px) and (max-width: 1299.98px) and (orientation: portrait) {
+  .card {
+    width: 25vw;
+    height: 15vh;
+  }
+}
+
+/* extra extra large devices */
+@media (min-width: 1300px) and (orientation: landscape) {
+  .card {
+    width: 25vw;
+    height: 20vh;
+  }
+}
+/* extra extra large devices */
+@media (min-width: 1300px) and (orientation: portrait) {
+  .card {
+    width: 25vw;
+    height: 15vh;
+  }
+}
+

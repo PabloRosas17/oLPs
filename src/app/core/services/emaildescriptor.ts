@@ -1,0 +1,7 @@
+
+/* defines the model for the email broadcasting through forms */
+
+export class EmailDescriptor {
+    constructor(public to: string, public from: string
+        ,       public subject: string, public text: string, public html: string) { }
+}

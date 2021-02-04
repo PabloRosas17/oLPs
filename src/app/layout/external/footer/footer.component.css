@@ -1,0 +1,62 @@
+.fixed-footer {
+	flex: 0 0 auto;
+    /* background-image: url(../../../../assets/img/img4.png);
+    background-size: cover; */
+    background: rgb(25,29,50);
+    background: linear-gradient(100deg, rgba(25,29,50,1) 100%, rgba(234,180,189,1) 100%);
+	color: #FFFFFF;
+    font-family: 'Mogra', cursive;
+}
+.footer-copyright a {
+    color: #FFFFFF;
+	font-size: 14px;
+}
+
+/**
+ * Media Queries to handle different screen sizes
+ */
+
+/* extra small devices */
+@media (max-width: 575.98px) and (orientation: landscape) {  
+
+}
+/* extra small devices */
+@media (max-width: 575.98px) and (orientation: portrait) {  
+
+}
+
+/* small devices */
+@media (min-width: 576px) and (max-width: 767.98px) and (orientation: landscape) {  
+
+}
+/* small devices */
+@media (min-width: 576px) and (max-width: 767.98px) and (orientation: portrait) {  
+
+}
+
+/* medium devices */
+@media (min-width: 768px) and (max-width: 991.98px) and (orientation: landscape) {
+
+}
+/* medium devices */
+@media (min-width: 768px) and (max-width: 991.98px) and (orientation: portrait) {
+
+}
+
+/* large devices */
+@media (min-width: 992px) and (max-width: 1199.98px) and (orientation: landscape) { 
+
+}
+/* large devices */
+@media (min-width: 992px) and (max-width: 1199.98px) and (orientation: portrait) { 
+
+}
+
+/* extra large devices */
+@media (min-width: 1200px) and (orientation: landscape) {
+
+}
+/* extra large devices */
+@media (min-width: 1200px) and (orientation: portrait) {
+
+}
