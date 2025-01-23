@@ -1,6 +1,6 @@
 # pr17 [![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)](https://github.com/facebook/react)
 
-pr17 is my personal website
+pr17 is my website
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
@@ -15,9 +15,5 @@ Please use this project for learning, demonstration purposes, and evalutaion of 
 
 ## License
 ```xml
-The [NAME_OF_LICENSE] License
-
 Copyright 2025 © PabloRosas17 @ https://github.com/PabloRosas17
-
-[DESCRIPTION_OF_LICENSE]
 ```
