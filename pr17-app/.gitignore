@@ -31,3 +31,6 @@ desktop.ini
 public/
 # Testing
 /coverage
+# Formatter
+.prettierrc
+.prettierignore

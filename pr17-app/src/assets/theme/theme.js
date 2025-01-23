@@ -3,10 +3,28 @@ import { createTheme } from "@mui/material/styles";
 const theme = createTheme({
   palette: {
     primary: {
-      main: "#1976d2",
+      main: "#D7A97E",
+      light: "#E8CBAF",
+      dark: "#C9884C",
+    },
+    secondary: {
+      main: "#7EACD7",
+      light: "#9DC3E4",
+      dark: "#6A9BCF",
+    },
+    error: {
+      main: "#B00020",
+      light: "#BF152C",
+      dark: "#CC1E33",
+    },
+    warning: {
+      main: "#FCEC55",
+      light: "#FCEF74",
+      dark: "#FAE635",
     },
     background: {
-      default: "#0f0f0f",
+      paper: "#f0f0f0",
+      default: "#f0f0f0"
     },
   },
   typography: {
@@ -22,7 +40,6 @@ const theme = createTheme({
           fontFamily: "'Roboto', sans-serif",
         },
         ".App": {
-          backgroundColor: "#f0f0f0",
           minHeight: "100vh",
           display: "flex",
           alignItems: "center",

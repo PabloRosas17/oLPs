@@ -7,11 +7,16 @@ const BreadCrumbs = () => {
   const location = useLocation();
   const pathnames = location.pathname.split("/").filter((x) => x);
   const currentLabel = pathnames.length
-    ? routes.find((route) => route.path === `/${pathnames[pathnames.length - 1]}`)?.label
+    ? routes.find(
+        (route) => route.path === `/${pathnames[pathnames.length - 1]}`
+      )?.label
     : "Timeline";
 
   return (
-    <MUIBreadcrumbs aria-label="breadcrumb" sx={{ position: "absolute", top: 10, left: 10 }}>
+    <MUIBreadcrumbs
+      aria-label="breadcrumb"
+      sx={{ position: "absolute", top: 10, left: 10 }}
+    >
       <Link underline="hover" color="inherit" href="/">
         Home
       </Link>
