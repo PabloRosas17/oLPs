@@ -8,7 +8,7 @@ function App() {
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
-      <Router>
+      <Router basename="/timeline">
         <RoutesConfig />
       </Router>
     </ThemeProvider>
