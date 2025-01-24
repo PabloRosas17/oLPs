@@ -25,7 +25,7 @@ const TimeLinePage = () => {
     <div style={{ height: '100vh', overflow: 'scroll' }}>
       <StickyHeader />
       <MuiBreadCrumbs />
-      <Box sx={{ position: 'relative', height: '100vh', padding: 2 }}>
+      <Box sx={{ backgroundColor: 'background.default', position: 'relative', height: '100vh', padding: 2 }}>
         <Stack direction="column" spacing={4} sx={{ marginTop: 1 }}>
           <Timeline position="alternate">
             {timelineData.map((item, index) => (

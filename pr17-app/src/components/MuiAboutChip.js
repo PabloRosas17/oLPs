@@ -11,6 +11,7 @@ const MuiAboutChip = () => {
       component={RouterLink}
       to="/about"
       sx={{
+        color: 'primary.light',
         position: 'relative',
         left: '50%',
         transform: 'translateX(-50%)',

@@ -29,7 +29,7 @@ const MuiBreadCrumbs = () => {
   return (
     <Breadcrumbs
       aria-label="breadcrumb"
-      sx={{ padding: '10px 0', margin: 'auto' }}
+      sx={{ backgroundColor: 'background.default', padding: '10px 0', margin: 'auto' }}
     >
       {pathnames.map((value, index) => {
         const to = `/${pathnames.slice(0, index + 1).join('/')}`;
@@ -43,6 +43,7 @@ const MuiBreadCrumbs = () => {
               color={index === pathnames.length - 1 ? 'primary' : 'default'}
               size="small"
               sx={{
+                color: 'primary.light',
                 marginLeft: 1,
               }}
             />
@@ -50,12 +51,13 @@ const MuiBreadCrumbs = () => {
         );
       })}
       {currentLabel && (
-        <Typography color="text.primary">
+        <Typography color="text.primary" >
           <Chip
             label={capitalizeFirstLetter(currentLabel)}
             color="primary"
             size="small"
             sx={{
+              color: 'primary.light',
               marginLeft: 1,
             }}
           />

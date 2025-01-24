@@ -32,7 +32,7 @@ const AboutPage = () => {
     <div>
       <StickyHeader />
       <MuiBreadCrumbs />
-      <Box sx={{ position: 'relative', height: '100vh', padding: 2 }}>
+      <Box sx={{ backgroundColor: 'background.default', position: 'relative', height: '100vh', padding: 2 }}>
         <CenteredBox>
           <AboutSection />
         </CenteredBox>
