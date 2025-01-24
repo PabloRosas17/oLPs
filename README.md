@@ -1,8 +1,12 @@
 # pr17 [![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)](https://github.com/facebook/react)
 
-pr17 is my website
+[pr17](https://pablorosas17.github.io/pr17) is my website
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
+<p><img src="https://github.com/PabloRosas17/pr17/blob/main/media/screenshots/media_pages_timeline.png" width="100" height="100" alt="pr17-timeline"/></p>
+
+<p><img src="https://github.com/PabloRosas17/pr17/blob/main/media/screenshots/media_pages_about.png" width="100" height="100" alt="pr17-about"/></p>
 
 ## Donations
 I've always appreciated a :beer: with :pizza: , please consider donating :heart: , thank you :exclamation:
