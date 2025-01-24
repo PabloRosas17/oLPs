@@ -7,7 +7,15 @@ const TimeLineCard = ({
   expandedIndex,
   index,
   handleExpand,
+  link,
 }) => {
+  const handleClick = (e) => {
+    e.stopPropagation();
+    if (link) {
+      window.open(link, '_blank');
+    }
+  };
+
   return (
     <Card
       onClick={() => handleExpand(index)}
@@ -26,21 +34,46 @@ const TimeLineCard = ({
       <CardContent>
         <Typography
           variant="h6"
-          sx={{ fontSize: '19px', color: 'primary.dark' }}
+          sx={{
+            fontSize: '19px',
+            color: 'primary.dark',
+            marginBottom: '8px',
+            lineHeight: 1.4,
+          }}
         >
-          {title}
+          {link ? (
+            <Button
+              onClick={handleClick}
+              sx={{
+                fontSize: '19px',
+                color: 'primary.dark',
+                textTransform: 'none',
+              }}
+            >
+              {title}
+            </Button>
+          ) : (
+            title
+          )}
         </Typography>
         <Button
           size="small"
           onClick={() => handleExpand(index)}
-          sx={{ textTransform: 'capitalize', marginTop: 1, fontSize: '10px' }}
+          sx={{
+            color: 'primary',
+            fontSize: '10px',
+          }}
         >
           {expandedIndex === index ? `Reduce : ${title}` : `Boost : ${title}`}
         </Button>
         {expandedIndex === index && (
-          <Typography 
+          <Typography
             variant="body1"
-            sx={{ marginTop: 2, color: 'primary.dark' }}>
+            sx={{
+              color: 'primary.dark',
+              fontSize: '14px',
+            }}
+          >
             {content}
           </Typography>
         )}
