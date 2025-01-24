@@ -4,9 +4,12 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-<p><img src="https://github.com/PabloRosas17/pr17/blob/main/media/screenshots/media_pages_timeline.png" width="350" height="150" alt="pr17-timeline"/></p>
-
-<p><img src="https://github.com/PabloRosas17/pr17/blob/main/media/screenshots/media_pages_about.png" width="350" height="150" alt="pr17-about"/></p>
+<div style="display: flex; justify-content: center; gap: 10px;">
+  <img src="https://github.com/PabloRosas17/pr17/blob/main/media/screenshots/media_pages_timeline.png"
+  width="350" height="150" alt="pr17-timeline">
+  <img src="https://github.com/PabloRosas17/pr17/blob/main/media/screenshots/media_pages_about.png" 
+  width="350" height="150" alt="pr17-about">
+</div>
 
 ## Donations
 I've always appreciated a :beer: with :pizza: , please consider donating :heart: , thank you :exclamation:
