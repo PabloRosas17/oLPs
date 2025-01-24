@@ -1,9 +1,5 @@
 import React from 'react';
-import {
-  Breadcrumbs,
-  Typography,
-  Chip
-} from '@mui/material';
+import { Breadcrumbs, Typography, Chip } from '@mui/material';
 import { useLocation } from 'react-router-dom';
 import routes from '../routes/routes.js';
 
@@ -19,7 +15,8 @@ const MuiBreadCrumbs = () => {
   return (
     <Breadcrumbs
       aria-label="breadcrumb"
-      sx={{  padding: '10px 0', margin: 'auto'}} >
+      sx={{ padding: '10px 0', margin: 'auto' }}
+    >
       {pathnames.map((value, index) => {
         const to = `/${pathnames.slice(0, index + 1).join('/')}`;
         const label = routes.find((route) => route.path === to)?.label || value;
@@ -29,8 +26,13 @@ const MuiBreadCrumbs = () => {
               label={label}
               color={index === pathnames.length - 1 ? 'primary' : 'default'}
               size="small"
-              sx={{ 
-                marginLeft: 1
+              sx={{
+                marginLeft: 0.5,
+                transition: 'transform 0.1s ease, box-shadow 0.1s ease',
+                '&:hover': {
+                  backgroundColor: 'primary.dark',
+                  boxShadow: '0px 4px 8px rgba(0, 0, 0, 0.3)',
+                },
               }}
             />
           </Typography>
@@ -42,8 +44,13 @@ const MuiBreadCrumbs = () => {
             label={currentLabel}
             color="primary"
             size="small"
-            sx={{ 
-              marginLeft: 1
+            sx={{
+              marginLeft: 0.5,
+              transition: 'transform 0.1s ease, box-shadow 0.1s ease',
+              '&:hover': {
+                backgroundColor: 'primary.dark',
+                boxShadow: '0px 4px 8px rgba(0, 0, 0, 0.3)',
+              },
             }}
           />
         </Typography>
