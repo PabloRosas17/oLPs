@@ -49,6 +49,11 @@ const AboutPage = () => {
               value={value}
               onChange={handleChange}
               aria-label="contact tabs"
+              sx={{
+                '& .MuiTabs-indicator': {
+                  display: 'none',
+                },
+              }}
             >
               <ContactTab
                 icon={<LinkedInIcon />}

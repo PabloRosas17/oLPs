@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 import { Tab } from '@mui/material';
 
 const ContactTab = ({ icon, onClick, label }) => {
@@ -11,6 +11,9 @@ const ContactTab = ({ icon, onClick, label }) => {
         '&:hover': {
           cursor: 'pointer',
           backgroundColor: '#f0f0f0',
+        },
+        '&.Mui-selected': {
+          backgroundColor: '#e0e0e0',
         },
       }}
     />
