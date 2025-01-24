@@ -1,6 +1,6 @@
 // TimeLinePage.js
-import React, { useState } from "react";
-import { Stack } from "@mui/material";
+import React, { useState } from 'react';
+import { Stack } from '@mui/material';
 import {
   Timeline,
   TimelineItem,
@@ -8,10 +8,11 @@ import {
   TimelineDot,
   TimelineConnector,
   TimelineContent,
-} from "@mui/lab";
-import BreadCrumbs from "../components/BreadCrumbs.js";
-import TimeLineCard from "../components/TimeLineCard.js";
-import timelineData from "../assets/data/timelineData.js";
+} from '@mui/lab';
+import BreadCrumbs from '../components/BreadCrumbs.js';
+import StickyHeader from '../components/StickyHeader.js';
+import TimeLineCard from '../components/TimeLineCard.js';
+import timelineData from '../assets/data/timelineData.js';
 
 const TimeLinePage = () => {
   const [expandedIndex, setExpandedIndex] = useState(null);
@@ -21,7 +22,8 @@ const TimeLinePage = () => {
   };
 
   return (
-    <div style={{ height: "100vh", overflow: "scroll" }}>
+    <div style={{ height: '100vh', overflow: 'scroll' }}>
+      <StickyHeader />
       <BreadCrumbs />
       <Stack direction="column" spacing={4} sx={{ marginTop: 5 }}>
         <Timeline position="alternate">

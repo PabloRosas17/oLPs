@@ -1,6 +1,6 @@
 import React from "react";
 
-const SwiftTruckPage = () => {
+const SwiftTruckModal = () => {
   return (
     <div>
       <p>env.REACT_APP_SWIFTTRUCK_TITLE</p>
@@ -8,4 +8,4 @@ const SwiftTruckPage = () => {
   );
 };
 
-export default SwiftTruckPage;
+export default SwiftTruckModal;
