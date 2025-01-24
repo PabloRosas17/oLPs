@@ -6,9 +6,9 @@
 
 <div style="display: flex; justify-content: center; gap: 10px;">
   <img src="https://github.com/PabloRosas17/pr17/blob/main/media/screenshots/media_pages_timeline.png"
-  width="375" height="375" alt="pr17-timeline">
+  width="375" height="275" alt="pr17-timeline">
   <img src="https://github.com/PabloRosas17/pr17/blob/main/media/screenshots/media_pages_about.png" 
-  width="375" height="375" alt="pr17-about">
+  width="375" height="275" alt="pr17-about">
 </div>
 
 ## Donations
