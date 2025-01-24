@@ -6,11 +6,25 @@ import routes from '../routes/routes.js';
 const MuiBreadCrumbs = () => {
   const location = useLocation();
   const pathnames = location.pathname.split('/').filter((x) => x);
-  const currentLabel = pathnames.length
-    ? routes.find(
-        (route) => route.path === `/${pathnames[pathnames.length - 1]}`
-      )?.label
-    : 'Timeline';
+  const capitalizeFirstLetter = (string) =>
+    string.charAt(0).toUpperCase() + string.slice(1);
+
+  let currentLabel = '';
+  if (Array.isArray(routes)) {
+    currentLabel = pathnames.length
+      ? routes.find(
+          (route) => route.path === `/${pathnames[pathnames.length - 1]}`
+        )?.label
+      : '';
+  } else if (typeof routes === 'object') {
+    currentLabel = pathnames.length
+      ? routes[`/${pathnames[pathnames.length - 1]}`]
+      : '';
+  }
+
+  if (!currentLabel) {
+    currentLabel = 'timeline';
+  }
 
   return (
     <Breadcrumbs
@@ -19,20 +33,17 @@ const MuiBreadCrumbs = () => {
     >
       {pathnames.map((value, index) => {
         const to = `/${pathnames.slice(0, index + 1).join('/')}`;
-        const label = routes.find((route) => route.path === to)?.label || value;
+        const label = Array.isArray(routes)
+          ? routes.find((route) => route.path === to)?.label || value
+          : routes[to] || value;
         return (
           <Typography key={to} color="text.primary">
             <Chip
-              label={label}
+              label={capitalizeFirstLetter(label)}
               color={index === pathnames.length - 1 ? 'primary' : 'default'}
               size="small"
               sx={{
-                marginLeft: 0.5,
-                transition: 'transform 0.1s ease, box-shadow 0.1s ease',
-                '&:hover': {
-                  backgroundColor: 'primary.dark',
-                  boxShadow: '0px 4px 8px rgba(0, 0, 0, 0.3)',
-                },
+                marginLeft: 1,
               }}
             />
           </Typography>
@@ -41,16 +52,11 @@ const MuiBreadCrumbs = () => {
       {currentLabel && (
         <Typography color="text.primary">
           <Chip
-            label={currentLabel}
+            label={capitalizeFirstLetter(currentLabel)}
             color="primary"
             size="small"
             sx={{
-              marginLeft: 0.5,
-              transition: 'transform 0.1s ease, box-shadow 0.1s ease',
-              '&:hover': {
-                backgroundColor: 'primary.dark',
-                boxShadow: '0px 4px 8px rgba(0, 0, 0, 0.3)',
-              },
+              marginLeft: 1,
             }}
           />
         </Typography>
