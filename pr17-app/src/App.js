@@ -10,7 +10,7 @@ function App() {
       <CssBaseline />
       <Router
         /* production='pr17' 
-        || development='/'*/
+        development='/' */
         basename="/pr17"
       >
         <RoutesConfig />
