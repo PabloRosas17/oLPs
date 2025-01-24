@@ -9,8 +9,6 @@ function App() {
     <ThemeProvider theme={theme}>
       <CssBaseline />
       <Router
-        /* production='pr17' 
-        development='/' */
         basename="/pr17"
       >
         <RoutesConfig />
