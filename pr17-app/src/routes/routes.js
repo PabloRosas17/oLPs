@@ -7,7 +7,6 @@ import AboutPage from '../pages/AboutPage';
 const RoutesConfig = () => {
   return (
     <Routes>
-      <Route path="/pr17" element={<TimeLinePage />} /> {/* ROOT */}
       <Route path="/pr17/timeline" element={<TimeLinePage />} />
       <Route path="/pr17/about" element={<AboutPage />} />
     </Routes>
