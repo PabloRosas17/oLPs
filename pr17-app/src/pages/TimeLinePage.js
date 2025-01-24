@@ -1,6 +1,4 @@
-// TimeLinePage.js
 import React, { useState } from 'react';
-import { Stack } from '@mui/material';
 import {
   Timeline,
   TimelineItem,
@@ -9,7 +7,9 @@ import {
   TimelineConnector,
   TimelineContent,
 } from '@mui/lab';
-import BreadCrumbs from '../components/BreadCrumbs.js';
+import { Stack, Box } from '@mui/material';
+import MuiAboutChip from '../components/MuiAboutChip.js';
+import MuiBreadCrumbs from '../components/MuiBreadCrumbs.js';
 import StickyHeader from '../components/StickyHeader.js';
 import TimeLineCard from '../components/TimeLineCard.js';
 import timelineData from '../assets/data/timelineData.js';
@@ -24,28 +24,31 @@ const TimeLinePage = () => {
   return (
     <div style={{ height: '100vh', overflow: 'scroll' }}>
       <StickyHeader />
-      <BreadCrumbs />
-      <Stack direction="column" spacing={4} sx={{ marginTop: 5 }}>
-        <Timeline position="alternate">
-          {timelineData.map((item, index) => (
-            <TimelineItem key={index}>
-              <TimelineSeparator>
-                <TimelineDot color="primary" />
-                {index < timelineData.length - 1 && <TimelineConnector />}
-              </TimelineSeparator>
-              <TimelineContent>
-                <TimeLineCard
-                  title={item.title}
-                  content={item.content}
-                  expandedIndex={expandedIndex}
-                  index={index}
-                  handleExpand={handleExpand}
-                />
-              </TimelineContent>
-            </TimelineItem>
-          ))}
-        </Timeline>
-      </Stack>
+      <MuiBreadCrumbs />
+      <Box sx={{ position: 'relative', height: '100vh', padding: 2 }}>
+        <Stack direction="column" spacing={4} sx={{ marginTop: 1 }}>
+          <Timeline position="alternate">
+            {timelineData.map((item, index) => (
+              <TimelineItem key={index}>
+                <TimelineSeparator>
+                  <TimelineDot color="primary" />
+                  {index < timelineData.length - 1 && <TimelineConnector />}
+                </TimelineSeparator>
+                <TimelineContent>
+                  <TimeLineCard
+                    title={item.title}
+                    content={item.content}
+                    expandedIndex={expandedIndex}
+                    index={index}
+                    handleExpand={handleExpand}
+                  />
+                </TimelineContent>
+              </TimelineItem>
+            ))}
+          </Timeline>
+        </Stack>
+        <MuiAboutChip />
+      </Box>
     </div>
   );
 };

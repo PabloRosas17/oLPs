@@ -1,14 +1,13 @@
 import React from 'react';
 import {
-  Breadcrumbs as MUIBreadcrumbs,
+  Breadcrumbs,
   Typography,
-  Link,
-  Chip,
+  Chip
 } from '@mui/material';
 import { useLocation } from 'react-router-dom';
 import routes from '../routes/routes.js';
 
-const BreadCrumbs = () => {
+const MuiBreadCrumbs = () => {
   const location = useLocation();
   const pathnames = location.pathname.split('/').filter((x) => x);
   const currentLabel = pathnames.length
@@ -18,10 +17,9 @@ const BreadCrumbs = () => {
     : 'Timeline';
 
   return (
-    <MUIBreadcrumbs
+    <Breadcrumbs
       aria-label="breadcrumb"
-      sx={{ padding: '10px 0', margin: 'auto' }}
-    >
+      sx={{  padding: '10px 0', margin: 'auto'}} >
       {pathnames.map((value, index) => {
         const to = `/${pathnames.slice(0, index + 1).join('/')}`;
         const label = routes.find((route) => route.path === to)?.label || value;
@@ -31,7 +29,9 @@ const BreadCrumbs = () => {
               label={label}
               color={index === pathnames.length - 1 ? 'primary' : 'default'}
               size="small"
-              sx={{ marginLeft: 1 }}
+              sx={{ 
+                marginLeft: 1
+              }}
             />
           </Typography>
         );
@@ -42,12 +42,14 @@ const BreadCrumbs = () => {
             label={currentLabel}
             color="primary"
             size="small"
-            sx={{ marginLeft: 1 }}
+            sx={{ 
+              marginLeft: 1
+            }}
           />
         </Typography>
       )}
-    </MUIBreadcrumbs>
+    </Breadcrumbs>
   );
 };
 
-export default BreadCrumbs;
+export default MuiBreadCrumbs;
