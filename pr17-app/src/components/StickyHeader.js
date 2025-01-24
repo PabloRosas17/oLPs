@@ -18,7 +18,6 @@ const StickyHeader = () => {
     <AppBar
       position="sticky"
       sx={{
-        top: 0,
         transition: 'top 0.3s',
         top: scrollingUp ? 0 : '-56px',
         height: '10px',

@@ -1,6 +1,9 @@
 import React, { useState } from 'react';
 import { Box, Stack, Tabs } from '@mui/material';
+import AboutSection from '../components/AboutSection.js';
 import MuiBreadCrumbs from '../components/MuiBreadCrumbs.js';
+import CenteredBox from '../components/CenteredBox.js';
+import ContactTab from '../components/ContactTab.js';
 import StickyHeader from '../components/StickyHeader.js';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import GitHubIcon from '@mui/icons-material/GitHub';

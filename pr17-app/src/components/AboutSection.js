@@ -1,5 +1,5 @@
 import React from "react";
-import { Paper } from '@mui/material';
+import { Paper, Typography } from '@mui/material';
 
 const AboutSection = () => (
   <Paper
