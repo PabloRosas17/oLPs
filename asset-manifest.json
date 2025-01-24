@@ -1,0 +1,12 @@
+{
+  "files": {
+    "main.js": "/pr17-app/static/js/main.b70c8fda.js",
+    "static/js/488.0a49a2dd.chunk.js": "/pr17-app/static/js/488.0a49a2dd.chunk.js",
+    "index.html": "/pr17-app/index.html",
+    "main.b70c8fda.js.map": "/pr17-app/static/js/main.b70c8fda.js.map",
+    "488.0a49a2dd.chunk.js.map": "/pr17-app/static/js/488.0a49a2dd.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/js/main.b70c8fda.js"
+  ]
+}
