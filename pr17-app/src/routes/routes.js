@@ -7,8 +7,9 @@ import AboutPage from '../pages/AboutPage';
 const RoutesConfig = () => {
   return (
     <Routes>
-      <Route path="/pr17/timeline" element={<TimeLinePage />} />
-      <Route path="/pr17/about" element={<AboutPage />} />
+      <Route path="/" element={<TimeLinePage />} /> {/* ROOT */}
+      <Route path="/timeline" element={<TimeLinePage />} />
+      <Route path="/about" element={<AboutPage />} />
     </Routes>
   );
 };
