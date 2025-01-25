@@ -4,17 +4,9 @@
   "private": true,
   "homepage": "https://pablorosas17.github.io/pr17-app",
   "dependencies": {
-    "@emotion/react": "^11.14.0",
-    "@emotion/styled": "^11.14.0",
-    "@fontsource/roboto": "^5.1.1",
-    "@mui/icons-material": "^6.4.1",
-    "@mui/lab": "^6.0.0-beta.24",
-    "@mui/material": "^6.4.1",
-    "cra-template": "^1.2.0",
+    "cra-template": "1.2.0",
     "react": "^19.0.0",
-    "react-devtools": "^6.0.1",
     "react-dom": "^19.0.0",
-    "react-router-dom": "^7.1.3",
     "react-scripts": "^5.0.1",
     "web-vitals": "^4.2.4"
   },
@@ -23,10 +15,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "copy-assets": "cp -r ./public/* ./build",
-    "predeploy": "npm run build && npm run copy-assets",
-    "deploy": "gh-pages -d build"
+    "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": [
@@ -47,7 +36,6 @@
     ]
   },
   "devDependencies": {
-    "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
-    "gh-pages": "^6.3.0"
+    "rimraf": "^6.0.1"
   }
 }

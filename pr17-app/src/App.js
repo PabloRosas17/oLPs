@@ -1,18 +1,24 @@
-import { ThemeProvider } from '@mui/material/styles';
-import CssBaseline from '@mui/material/CssBaseline';
-import { BrowserRouter as Router } from 'react-router-dom';
-import RoutesConfig from './routes/routes';
-import theme from './assets/theme/theme.js';
+import logo from './logo.svg';
+import './App.css';
 
 function App() {
   return (
-    <ThemeProvider theme={theme}>
-      <CssBaseline />
-      <div color="#0f0f0f">DEBUG:APP.JS</div>
-      <Router basename="/pr17-app">
-        <RoutesConfig />
-      </Router>
-    </ThemeProvider>
+    <div className="App">
+      <header className="App-header">
+        <img src={logo} className="App-logo" alt="logo" />
+        <p>
+          Edit <code>src/App.js</code> and save to reload.
+        </p>
+        <a
+          className="App-link"
+          href="https://reactjs.org"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Learn React
+        </a>
+      </header>
+    </div>
   );
 }
 
