@@ -1,5 +1,12 @@
 import React from 'react';
-import { Card, CardContent, Typography, Button } from '@mui/material';
+import {
+  Card,
+  CardContent,
+  Typography,
+  Button,
+  useTheme,
+  useMediaQuery,
+} from '@mui/material';
 
 const TimeLineCard = ({
   title,
@@ -9,6 +16,9 @@ const TimeLineCard = ({
   handleExpand,
   link,
 }) => {
+  const theme = useTheme();
+  const isSmallScreen = useMediaQuery(theme.breakpoints.down('sm'));
+
   const handleClick = (e) => {
     e.stopPropagation();
     if (link) {
@@ -20,7 +30,7 @@ const TimeLineCard = ({
     <Card
       onClick={() => handleExpand(index)}
       sx={{
-        width: '50%',
+        width: isSmallScreen ? '90%' : '50%',
         margin: 'auto',
         marginTop: -2,
         marginBottom: 2,
@@ -35,7 +45,7 @@ const TimeLineCard = ({
         <Typography
           variant="h6"
           sx={{
-            fontSize: '19px',
+            fontSize: isSmallScreen ? '16px' : '19px',
             color: 'primary.dark',
             marginBottom: '8px',
             lineHeight: 1.4,
@@ -45,7 +55,7 @@ const TimeLineCard = ({
             <Button
               onClick={handleClick}
               sx={{
-                fontSize: '19px',
+                fontSize: isSmallScreen ? '16px' : '19px',
                 color: 'primary.dark',
                 textTransform: 'none',
               }}
@@ -61,7 +71,7 @@ const TimeLineCard = ({
           onClick={() => handleExpand(index)}
           sx={{
             color: 'primary',
-            fontSize: '10px',
+            fontSize: isSmallScreen ? '8px' : '10px',
           }}
         >
           {expandedIndex === index ? `Reduce : ${title}` : `Boost : ${title}`}
@@ -71,7 +81,7 @@ const TimeLineCard = ({
             variant="body1"
             sx={{
               color: 'primary.dark',
-              fontSize: '14px',
+              fontSize: isSmallScreen ? '12px' : '14px',
             }}
           >
             {content}
