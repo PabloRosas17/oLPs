@@ -9,7 +9,7 @@ function App() {
     <ThemeProvider theme={theme}>
       <CssBaseline />
       <div style={{ color: "#0f0f0f" }}>DEBUG: APP.JS</div>
-      <Router basename="/pr17-app">
+      <Router basename="/pr17">
         <RoutesConfig />
       </Router>
     </ThemeProvider>
