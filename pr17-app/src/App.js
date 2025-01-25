@@ -6,19 +6,14 @@ import theme from './assets/theme/theme.js';
 
 function App() {
   return (
-    <Router basename='/pr17-app'>
-    <div color='primary.dark'>DEBUG:APP.JS</div>
-    </Router>
+    <ThemeProvider theme={theme}>
+      <CssBaseline />
+      <div color="#0f0f0f">DEBUG:APP.JS</div>
+      <Router basename="/pr17-app">
+        <RoutesConfig />
+      </Router>
+    </ThemeProvider>
   );
 }
 
 export default App;
-
-/*
-    <ThemeProvider theme={theme}>
-      <CssBaseline />
-      <Router basename='/pr17-app'>
-        <RoutesConfig />
-      </Router>
-    </ThemeProvider>
-*/

@@ -1,11 +1,14 @@
-import React from "react";
-import ReactDOM from "react-dom/client";
-import App from "./App";
-import reportWebVitals from "./vitals/reportWebVitals";
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import App from './App';
+import reportWebVitals from './vitals/reportWebVitals';
 
-const root = ReactDOM.createRoot(document.getElementById("root"));
+const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-<div>DEBUG:APP.JS</div>
+  <React.StrictMode>
+    <div color="#0f0f0f">DEBUG:INDEX.JS</div>
+    <App />
+  </React.StrictMode>
 );
 
 reportWebVitals();
